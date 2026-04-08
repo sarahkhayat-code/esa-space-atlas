@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESA Member Space Agency HQ Atlas</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-sA+e2poK0qgF6GTrKv5fubf0ZGW19hG3No+n/8HEy3w=" crossorigin="" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <h1>ESA Member Space Agency HQ Atlas</h1>
+      <p>Real-time reference for European Space Agency member agencies with HQ location, address, and mapped coordinates.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="summary-panel">
+      <div>
+        <h2>Mission Control View</h2>
+        <p>Interactive map and data table of all current ESA full member national space agencies.</p>
+      </div>
+      <div class="stats">
+        <div><strong id="entryCount">0</strong><span>Agencies</span></div>
+        <div><strong>23</strong><span>Full ESA members</span></div>
+      </div>
+    </section>
+
+    <section class="map-section">
+      <h2>Member Space Agency Headquarters</h2>
+      <div id="map"></div>
+    </section>
+
+    <section class="table-section">
+      <div class="table-header">
+        <h2>Headquarters Data Table</h2>
+        <p>Click any row to center the map on that headquarters.</p>
+      </div>
+      <div class="table-wrap">
+        <table id="agencyTable">
+          <thead>
+            <tr>
+              <th>Agency</th>
+              <th>City</th>
+              <th>Country</th>
+              <th>Address</th>
+              <th>Latitude</th>
+              <th>Longitude</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built for GitHub Pages deployment as a live ESA member HQ atlas.</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-o9N1j7Zk4jCsJQwOcKpFM7Lw3rGx7uH5g4xtTM+v1r0=" crossorigin=""></script>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
