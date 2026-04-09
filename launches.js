@@ -12,8 +12,14 @@ async function fetchLaunches() {
         const data = await response.json();
         
         if (data.results && data.results.length > 0) {
-            // The first item is usually the next launch since it's sorted by date ascending
-            const nextLaunch = data.results[0];
+            // Find the first launch in the future
+            const now = new Date();
+            const futureLaunches = data.results.filter(launch => new Date(launch.net) > now);
+            
+            // If all returned are in the past, fall back to the first one available, 
+            // otherwise use the first future one.
+            const nextLaunch = futureLaunches.length > 0 ? futureLaunches[0] : data.results[0];
+            
             setupHeroCountdown(nextLaunch);
             
             // Populate the rest of the schedule
