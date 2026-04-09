@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Launch Monitor</title>
+    <!-- Use Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- Link to custom CSS -->
+    <link rel="stylesheet" href="launches.css">
+</head>
+<body>
+    <div class="monitor-container">
+        <header class="header-section fade-in">
+            <a href="index.html" class="back-btn">&larr; Back to Atlas</a>
+            <h1>Global Launch <span>Monitor</span></h1>
+            <p>Live countdown and schedule for the next worldwide rocket launches.</p>
+        </header>
+
+        <section class="hero-countdown glass fade-in delay-1">
+            <div class="live-pulse"><span class="dot"></span> NEXT LAUNCH</div>
+            <h2 id="next-mission-name">Loading Next Mission...</h2>
+            <p class="rocket-info" id="next-rocket-info">---</p>
+            <div class="timer">
+                <div class="time-box">
+                    <span id="t-days">00</span>
+                    <label>Days</label>
+                </div>
+                <div class="time-box">
+                    <span id="t-hours">00</span>
+                    <label>Hours</label>
+                </div>
+                <div class="time-box">
+                    <span id="t-mins">00</span>
+                    <label>Minutes</label>
+                </div>
+                <div class="time-box">
+                    <span id="t-secs">00</span>
+                    <label>Seconds</label>
+                </div>
+            </div>
+        </section>
+
+        <section class="launch-schedule fade-in delay-2">
+            <h3>Upcoming Fleet Schedule</h3>
+            <div class="launch-grid" id="launch-grid">
+                <!-- Dynamically populated rows go here -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Script file -->
+    <script src="launches.js"></script>
+</body>
+</html>
